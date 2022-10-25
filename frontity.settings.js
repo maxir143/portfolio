@@ -14,15 +14,15 @@ const settings = {
         "theme": {
           "menu": [
             [
-              "About me",
-              "/about-me"
+              "Who am i?",
+              "/"
             ],
             [
-              "My work",
-              "/work"
+              "Stuff i have done",
+              "/projects"
             ],
             [
-              "Contact me",
+              "Get it touch",
               "/contact"
             ]
           ],
@@ -37,7 +37,8 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://maximilianovl143.wordpress.com/"
+          "url": "https://maximilianovl143.wordpress.com/",
+          "homepage": "about-me"
         }
       }
     },

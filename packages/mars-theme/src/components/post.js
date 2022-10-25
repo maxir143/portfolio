@@ -50,7 +50,7 @@ const Post = ({ state, actions, libraries }) => {
   return data.isReady ? (
     <Container>
       <div>
-        <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+        {/* <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} /> */}
 
         {/* Hide author and date on pages }
         {/*!data.isPage && (

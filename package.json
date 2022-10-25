@@ -11,7 +11,8 @@
     "npm": ">=6.0.0"
   },
   "scripts": {
-    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && frontity dev",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && frontity dev",
+    "dev": "frontity dev",
     "build": "frontity build",
     "serve": "frontity serve"
   },
