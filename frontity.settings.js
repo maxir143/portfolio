@@ -3,8 +3,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://maximilianovl143.wordpress.com/",
-      "title": "Maximiliano Valentin Lopez",
-      "description": "Portfolio"
+      "title": "Maximiliano Valentin López",
+      "description": "📍 CDMX, México"
     }
   },
   "packages": [
@@ -18,11 +18,11 @@ const settings = {
               "/"
             ],
             [
-              "Stuff i have done",
+              "Projects",
               "/projects"
             ],
             [
-              "Get it touch",
+              "Contact me",
               "/contact"
             ]
           ],
