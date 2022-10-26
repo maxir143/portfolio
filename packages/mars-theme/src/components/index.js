@@ -6,6 +6,7 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+import AboutMe from "./AboutMe";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -41,6 +42,7 @@ const Theme = ({ state }) => {
       on the type of URL we are in. */}
       <Main>
         <Switch>
+          <AboutMe state={state} when={data.route === '/'} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

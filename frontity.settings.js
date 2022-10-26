@@ -14,16 +14,16 @@ const settings = {
         "theme": {
           "menu": [
             [
-              "Who am i?",
+              "Portafolio",
               "/"
             ],
             [
-              "Projects",
+              "Proyectos",
               "/projects"
             ],
             [
-              "Contact me",
-              "/contact"
+              "Blog",
+              "/blog"
             ]
           ],
           "featured": {
@@ -38,7 +38,7 @@ const settings = {
       "state": {
         "source": {
           "url": "https://maximilianovl143.wordpress.com/",
-          "homepage": "about-me"
+          "postsPage": "blog"
         }
       }
     },
