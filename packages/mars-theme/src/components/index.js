@@ -1,12 +1,12 @@
-import { Global, css, connect, styled, Head } from 'frontity'
-import Switch from '@frontity/components/switch'
-import Header from './header'
-import List from './list'
-import Post from './post'
-import Loading from './loading'
-import Title from './title'
-import PageError from './page-error'
-import Portfolio from './Portfolio'
+import { Global, css, connect, styled, Head } from "frontity";
+import Switch from "@frontity/components/switch";
+import Header from "./header";
+import List from "./list";
+import Post from "./post";
+import Loading from "./loading";
+import Title from "./title";
+import PageError from "./page-error";
+import Portfolio from "./Portfolio";
 import {useEffect} from 'react'
 
 /**
@@ -22,8 +22,8 @@ const Theme = ({ state, actions }) => {
   const data = state.source.get(state.router.link)
 
   useEffect(() => {
-    if (state.router.link === '/')
-      actions.source.fetch('/about-me')
+    if (state.router.link === "/")
+      actions.source.fetch("/about-me");
   }, [state.router.link])
 
   return (
@@ -31,8 +31,8 @@ const Theme = ({ state, actions }) => {
       {/* Add some metatags to the <head> of the HTML. */}
       <Title />
       <Head>
-        <meta name='description' content={state.frontity.description} />
-        <html lang='en' />
+        <meta name="description" content={state.frontity.description} />
+        <html lang="en" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -59,37 +59,37 @@ const Theme = ({ state, actions }) => {
         </Switch>
       </Main>
     </>
-  )
-}
+  );
+};
 
-export default connect(Theme)
+export default connect(Theme);
 
 const globalStyles = css`
   body {
-    margin: 0
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   a,
   a:visited {
-    color: inherit
-    text-decoration: none
+    color: inherit;
+    text-decoration: none;
   }
-`
+`;
 
 const HeadContainer = styled.div`
-  display: flex
-  align-items: center
-  flex-direction: column
-  background-color: #1f38c5
-`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1f38c5;
+`;
 
 const Main = styled.div`
-  display: flex
-  justify-content: center
+  display: flex;
+  justify-content: center;
   background-image: linear-gradient(
     180deg,
     rgba(66, 174, 228, 0.1),
     rgba(66, 174, 228, 0)
-  )
-`
+  );
+`;

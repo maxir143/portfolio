@@ -36,6 +36,6 @@ const settings = {
     "@frontity/tiny-router",
     "@frontity/html2react"
   ]
-}
+};
 
-export default settings
+export default settings;
