@@ -1,6 +1,6 @@
 import { connect } from "frontity"
 
-const AboutMe = ({ state , actions, libraries, data}) => {
+const ListSet = ({ state , actions, libraries, data}) => {
   const post = state.source[data.type][data.id]
   return (
     <div>
@@ -10,4 +10,5 @@ const AboutMe = ({ state , actions, libraries, data}) => {
   )
 }
 
-export default connect(AboutMe)
+
+export default connect(ListSet)
