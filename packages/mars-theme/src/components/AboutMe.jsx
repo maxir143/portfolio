@@ -1,7 +1,7 @@
-import { connect } from "frontity"
+import { connect } from 'frontity'
 
 const AboutMe = ({ state , actions, libraries, data}) => {
-  const Html2React = libraries.html2react.Component;
+  const Html2React = libraries.html2react.Component
   const post = state.source[data.type][data.id]
   return(
     <div>
