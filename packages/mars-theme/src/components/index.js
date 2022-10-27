@@ -28,9 +28,6 @@ const Theme = ({ state, actions }) => {
       actions.source.fetch('/skills')
       actions.source.fetch('/tools-set')
     }
-      
-
-
   }, [state.router.link])
 
   return (
@@ -56,10 +53,7 @@ const Theme = ({ state, actions }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
-
           <Portfolio when={data.isHome} />
-
-
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
@@ -77,8 +71,7 @@ const globalStyles = css`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
-  a,
-  a:visited {
+  a {
     color: inherit;
     text-decoration: none;
   }
@@ -89,6 +82,7 @@ const HeadContainer = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #5837D0;
+  color: white;
 `;
 
 const Main = styled.div`
