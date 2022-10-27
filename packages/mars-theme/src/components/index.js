@@ -6,7 +6,8 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
-import AboutMe from "./AboutMe";
+import Portfolio from "./Portfolio";
+import {useEffect} from 'react'
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -16,9 +17,14 @@ import AboutMe from "./AboutMe";
  *
  * @returns The top-level react component representing the theme.
  */
-const Theme = ({ state }) => {
+const Theme = ({ state, actions }) => {
   // Get information about the current URL.
-  const data = state.source.get(state.router.link);
+  const data = state.source.get(state.router.link)
+
+  useEffect(() => {
+    if (state.router.link === "/")
+      actions.source.fetch("/about-me");
+  }, [state.router.link])
 
   return (
     <>
@@ -42,8 +48,11 @@ const Theme = ({ state }) => {
       on the type of URL we are in. */}
       <Main>
         <Switch>
-          <AboutMe state={state} when={data.route === '/'} />
           <Loading when={data.isFetching} />
+
+          <Portfolio when={data.isHome} />
+
+
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />

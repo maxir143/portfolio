@@ -13,18 +13,9 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            [
-              "Portafolio",
-              "/"
-            ],
-            [
-              "Proyectos",
-              "/projects"
-            ],
-            [
-              "Blog",
-              "/blog"
-            ]
+            ["Portafolio",  "/"],
+            ["Proyectos", "/projects"],
+            ["Blog", "/blog"]
           ],
           "featured": {
             "showOnList": false,
