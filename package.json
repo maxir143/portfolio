@@ -13,7 +13,7 @@
   "scripts": {
     "start": "frontity dev NODE_OPTIONS=--openssl-legacy-provider",
     "dev": "frontity dev",
-    "build": "frontity build",
+    "build": "frontity build NODE_OPTIONS=--openssl-legacy-provider",
     "serve": "frontity serve"
   },
   "prettier": {},
