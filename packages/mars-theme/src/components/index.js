@@ -68,8 +68,7 @@ export default connect(Theme);
 const globalStyles = css`
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   a {
     color: inherit;
@@ -81,8 +80,8 @@ const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #5837D0;
   color: white;
+  background: linear-gradient(90deg, #1CB5E0 25%, #000851 100%);
 `;
 
 const Main = styled.div`

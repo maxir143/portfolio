@@ -1,22 +1,27 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
+import {useState} from 'react'
 
 /**
  * Navigation Component
  *
  * It renders the navigation links
  */
+
 const Nav = ({ state }) => (
   <NavContainer>
     {state.theme.menu.map(([name, link]) => {
       // Check if the link matched the current page url
       const data = state.source.get(state.router.link);
-      const isCurrentPage = data.route === link;
+      const isCurrentPage = data.route.replaceAll('/', '') === link.replaceAll('/', '');
 
       return (
         <NavItem key={name}>
           {/* If link url is the current page, add `aria-current` for a11y */}
-          <Link link={link} aria-current={isCurrentPage ? "page" : undefined}>
+          <Link 
+            link={link} 
+            className={isCurrentPage ? "current-page" : null} 
+            aria-current={isCurrentPage ? "page" : null}>
             {name}
           </Link>
         </NavItem>
@@ -44,30 +49,13 @@ const NavContainer = styled.nav`
 
 const NavItem = styled.div`
   padding: 0;
-  margin: 0 16px;
-  color: rgba(255, 255, 255, 0.9);
+  margin: 8px 16px;
+  color: rgba(255, 255, 255, 1);
   font-size: 1.25rem;
   box-sizing: border-box;
   flex-shrink: 0;
 
-  & > a {
-    display: inline-block;
-    line-height: 2em;
-    border-bottom: 2px solid;
-    border-bottom-color: transparent;
-  }
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-
-    &:after {
-      content: "";
-      display: inline-block;
-      width: 24px;
-    }
+  .current-page {
+    color: black;
   }
 `;

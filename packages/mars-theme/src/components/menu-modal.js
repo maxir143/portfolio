@@ -21,7 +21,8 @@ const MenuModal = ({ ...props }) => {
             <MenuLink
               key={name}
               link={link}
-              aria-current={state.router.link === link ? "page" : undefined}
+              aria-current={state.router.link.replaceAll('/', '') === link.replaceAll('/', '') ? "page" : undefined}
+              className={state.router.link.replaceAll('/', '') === link.replaceAll('/', '') ? "current-page" : undefined}
             >
               {name}
             </MenuLink>
@@ -32,7 +33,8 @@ const MenuModal = ({ ...props }) => {
 };
 
 const MenuOverlay = styled.div`
-  background-color: #5837D0;
+  color: white;
+  background: linear-gradient(180deg, #1CB5E0 25%, #000851 100%);
   width: 100vw;
   height: 100vh;
   overflow: hidden auto;
@@ -45,6 +47,9 @@ const MenuOverlay = styled.div`
 const MenuContent = styled.div`
   z-index: 3;
   position: relative;
+  .current-page {
+    color: black !important;
+  }
 `;
 
 const MenuLink = styled(Link)`
@@ -54,10 +59,6 @@ const MenuLink = styled(Link)`
   font-size: 20px;
   text-align: center;
   padding: 1.2rem 0;
-  &:hover,
-  &:focus {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
 `;
 
 export default connect(MenuModal, { injectProps: false });

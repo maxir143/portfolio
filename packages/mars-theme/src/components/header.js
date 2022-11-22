@@ -26,10 +26,10 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   padding: 24px;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  color: #fff;
 `;
 
 const Title = styled.h2`
@@ -40,7 +40,6 @@ const Title = styled.h2`
 
 const Description = styled.h4`
   margin: 0;
-  color: rgba(240, 240, 240, 1);
   font-size: 22px;
 `;
 
