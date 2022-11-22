@@ -11,8 +11,7 @@
     "npm": "8"
   },
   "scripts": {
-    "start": "frontity dev SET NODE_OPTIONS=--openssl-legacy-provider",
-    "dev": "frontity dev",
+    "start": "frontity dev",
     "build": "frontity build",
     "serve": "frontity serve"
   },
