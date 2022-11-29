@@ -11,29 +11,18 @@ const Portfolio = ({ state }) => {
   return(
     <PortfolioDiv>
       {aboutMeData.isReady  ? <AboutMe data={aboutMeData}/> :  <Loading/>}
-      <br />
-      <SkillsDiv>
+      <div>
         {skillsData.isReady  ? <ListSet data={skillsData}/> :  <Loading/>}
-        {softSkillsData.isReady  ? <ListSet data={softSkillsData}/> :  <Loading/>}
-      </SkillsDiv>
-      {toolsSetData.isReady  ? <ListSet data={toolsSetData}/> :  <Loading/>}
+        {toolsSetData.isReady  ? <ListSet data={toolsSetData}/> :  <Loading/>}
+      </div>
+      {softSkillsData.isReady  ? <ListSet data={softSkillsData}/> :  <Loading/>}
     </PortfolioDiv>
   )
 }
 
-const SkillsDiv = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media only screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
-`
-
 const PortfolioDiv = styled.div`
     h2 { 
       font-size: 28px;
-      margin-top: 10px;
     }
 
     p {
@@ -49,8 +38,7 @@ const PortfolioDiv = styled.div`
     }
 
     margin:auto;
-    width: 95%;
-    max-width: 800px;
+    width: 80%;
     text-align: left;
 `;
 

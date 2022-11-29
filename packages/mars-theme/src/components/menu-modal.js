@@ -33,8 +33,7 @@ const MenuModal = ({ ...props }) => {
 };
 
 const MenuOverlay = styled.div`
-  color: white;
-  background: linear-gradient(180deg, #1CB5E0 25%, #000851 100%);
+  background-color: #1f38c5;
   width: 100vw;
   height: 100vh;
   overflow: hidden auto;
@@ -59,6 +58,16 @@ const MenuLink = styled(Link)`
   font-size: 20px;
   text-align: center;
   padding: 1.2rem 0;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  /* styles for active link */
+  &[aria-current="page"] {
+    color: yellow;
+    font-weight: bold;
+  }
 `;
 
 export default connect(MenuModal, { injectProps: false });

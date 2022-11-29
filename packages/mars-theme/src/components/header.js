@@ -26,6 +26,7 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   padding: 24px;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,12 +36,11 @@ const Container = styled.div`
 const Title = styled.h2`
   margin: 0;
   margin-bottom: 16px;
-  font-size: 32px;
 `;
 
 const Description = styled.h4`
   margin: 0;
-  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
 `;
 
 const StyledLink = styled(Link)`

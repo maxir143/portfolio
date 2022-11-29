@@ -49,13 +49,34 @@ const NavContainer = styled.nav`
 
 const NavItem = styled.div`
   padding: 0;
-  margin: 8px 16px;
-  color: rgba(255, 255, 255, 1);
-  font-size: 1.25rem;
+  margin: 0 16px;
+  color: #fff;
+  font-size: 0.9em;
   box-sizing: border-box;
   flex-shrink: 0;
 
-  .current-page {
-    color: black;
+  & > a {
+    display: inline-block;
+    line-height: 2em;
+    border-bottom: 2px solid;
+    border-bottom-color: transparent;
+    /* Use for semantic approach to style the current link */
+    &[aria-current="page"] {
+      border-bottom-color: #fff;
+    }
+  }
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 24px;
+    }
   }
 `;

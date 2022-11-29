@@ -1,4 +1,4 @@
-import { connect} from "frontity"
+import { connect } from "frontity"
 
 const ListSet = ({ state , actions, libraries, data}) => {
   const post = state.source[data.type][data.id]
@@ -9,5 +9,6 @@ const ListSet = ({ state , actions, libraries, data}) => {
     </div>
   )
 }
+
 
 export default connect(ListSet)
